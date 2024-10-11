@@ -10,6 +10,7 @@ app.use(function(req, res, next) {
 
 // Your API routes
 app.get('/api', (req, res) => {
+    console.log("Timestap: ", (new Date()).toUTCString());
     console.log("Request: ", req.query);
     res.json({ message: 'Hello from Express deployed on Vercel!' });
 });
